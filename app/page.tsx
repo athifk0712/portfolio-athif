@@ -18,7 +18,7 @@ const educationData = [
     period: "SD",
     title: "Masa Awal Eksplorasi",
     color: "#3ecfb2",
-    content: "Aktif bermain di luar bersama teman — layangan dan permainan tradisional. Mulai mengenal handphone dan game mobile sejak kelas 4. Jadi salah satu yang pertama mengenalkan Free Fire dan Mobile Legends ke teman-teman.",
+    content: "Masa SD adalah fondasi awal saya dalam belajar bersosialisasi dan beradaptasi. Saya tumbuh di lingkungan yang aktif, senang bermain bersama teman, dan mulai mengenal teknologi secara perlahan sejak duduk di bangku sekolah dasar.",
   },
   {
     period: "Pesantren",
@@ -174,7 +174,7 @@ export default function Home() {
           fontFamily: "'Syne', sans-serif", fontSize: "clamp(5rem, 18vw, 12rem)",
           fontWeight: 800, color: "rgba(255,255,255,0.018)",
           letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none", lineHeight: 1
-        }}>AK</div>
+        }}>AKOY</div>
 
         <div style={{ position: "absolute", bottom: "40px", left: "50%", transform: "translateX(-50%)" }}>
           <ChevronDown size={18} color="var(--text-dim)" style={{ animation: "fadeUp 1.5s ease infinite alternate" }} />
