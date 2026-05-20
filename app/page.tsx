@@ -9,6 +9,7 @@ const navItems = [
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "pancasila", label: "Values" },
+  { id: "tugas", label: "Tugas" },
   { id: "goals", label: "Goals" },
   { id: "contact", label: "Contact" },
 ];
@@ -18,7 +19,7 @@ const educationData = [
     period: "SD",
     title: "Masa Awal Eksplorasi",
     color: "#3ecfb2",
-    content: "Masa SD adalah fondasi awal saya dalam belajar bersosialisasi dan beradaptasi. Saya tumbuh di lingkungan yang aktif, senang bermain bersama teman, dan mulai mengenal teknologi secara perlahan sejak duduk di bangku sekolah dasar.",
+    content: "Aktif bermain di luar bersama teman — layangan dan permainan tradisional. Mulai mengenal handphone dan game mobile sejak kelas 4. Jadi salah satu yang pertama mengenalkan Free Fire dan Mobile Legends ke teman-teman.",
   },
   {
     period: "Pesantren",
@@ -174,7 +175,7 @@ export default function Home() {
           fontFamily: "'Syne', sans-serif", fontSize: "clamp(5rem, 18vw, 12rem)",
           fontWeight: 800, color: "rgba(255,255,255,0.018)",
           letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none", lineHeight: 1
-        }}>AKOY</div>
+        }}>AK</div>
 
         <div style={{ position: "absolute", bottom: "40px", left: "50%", transform: "translateX(-50%)" }}>
           <ChevronDown size={18} color="var(--text-dim)" style={{ animation: "fadeUp 1.5s ease infinite alternate" }} />
@@ -337,9 +338,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TUGAS PANCASILA */}
+      <section id="tugas" style={{ paddingBottom: "80px" }}>
+        <SectionHeader num="07" title="Tugas Pancasila" />
+        <div className="card" style={{ padding: "28px 30px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
+            <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--teal)", flexShrink: 0 }} />
+            <span style={{ fontSize: "10px", color: "var(--text-dim)", letterSpacing: "0.12em", textTransform: "uppercase" }}>Kelompok 1 · Pancasila</span>
+          </div>
+          <h3 style={{ fontSize: "20px", fontWeight: 700, marginBottom: "10px" }}>Saring Sebelum Sharing</h3>
+          <p style={{ fontSize: "13px", color: "var(--text-muted)", lineHeight: 1.75, marginBottom: "20px" }}>
+            Project Pancasila yang mengajarkan para mahasiswa dalam menyaring konten radikalisme di TikTok serta menghindari sikap tersebut dalam kehidupan sehari-hari terutama di internet.
+          </p>
+          <div style={{ borderTop: "0.5px solid var(--border)", paddingTop: "18px", marginBottom: "24px" }}>
+            <div style={{ fontSize: "10px", color: "var(--teal)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600, marginBottom: "10px" }}>Overview</div>
+            <p style={{ fontSize: "13px", color: "var(--text-muted)", lineHeight: 1.75 }}>
+              Saring Sebelum Sharing adalah kampanye edukasi untuk membekali mahasiswa dalam mengenali, menilai, dan menolak konten radikalisme di platform TikTok dan internet.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+            {[
+              { label: "📝 Blog", href: "https://nicholaswijayapradita.blogspot.com/" },
+              { label: "🎬 Videografis", href: "https://youtu.be/HhcY3ht6SIY?si=FaVVPaEYm1EBS7ER" },
+              { label: "📄 Laporan", href: "https://docs.google.com/document/u/3/d/1FnoLyZSRQFb8ZD8fXEwf2-agueOWo-GT2XacSbtQGZk/mobilebasic" },
+            ].map(({ label, href }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
+                display: "flex", alignItems: "center", justifyContent: "center",
+                background: "var(--bg)", border: "0.5px solid var(--border-hover)",
+                borderRadius: "12px", padding: "14px 16px",
+                fontSize: "13px", fontWeight: 500, color: "var(--text)",
+                textDecoration: "none", transition: "all 0.2s",
+                fontFamily: "'DM Sans', sans-serif"
+              }}>
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FUTURE GOALS */}
       <section id="goals" style={{ paddingBottom: "80px" }}>
-        <SectionHeader num="07" title="Future Goals" />
+        <SectionHeader num="08" title="Future Goals" />
         <div className="card" style={{ padding: "36px 32px", textAlign: "center" }}>
           <div style={{ fontSize: "32px", marginBottom: "20px" }}>🎯</div>
           <h3 className="serif" style={{ fontSize: "26px", fontWeight: 400, fontStyle: "italic", marginBottom: "16px", color: "var(--text)" }}>
@@ -353,7 +393,7 @@ export default function Home() {
 
       {/* CONTACT */}
       <section id="contact" style={{ paddingBottom: "120px" }}>
-        <SectionHeader num="08" title="Contact" />
+        <SectionHeader num="09" title="Contact" />
         <div className="card" style={{ padding: "36px 32px", textAlign: "center" }}>
           <h3 className="serif" style={{ fontSize: "28px", fontWeight: 400, fontStyle: "italic", marginBottom: "10px" }}>Let's connect.</h3>
           <p style={{ fontSize: "13px", color: "var(--text-muted)", marginBottom: "28px" }}>
